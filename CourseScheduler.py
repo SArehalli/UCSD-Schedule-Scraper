@@ -14,7 +14,7 @@ def getLHSchedule(quarter, hall, day, con):
     Results.sort(key=lambda tup: tup[2][0])
 
     # Turn the time result into something human readable
-    Results = [(n, r, time.strftime("%H:%M", t[0][0]) + "-" + time.strftime("%H:%M", t[0][1]) ) for (n, r, t) in Results]
+    Results = [(n, r, time.strftime("%I:%M", t[0][0]) + "-" + time.strftime("%I:%M %p", t[0][1]) ) for (n, r, t) in Results]
 
     return Results 
 
